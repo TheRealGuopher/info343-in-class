@@ -243,7 +243,7 @@ console.log(player.email);
 //returns `undefined` (no error)
 //TODO: write the value of the `phone` property to the console
 //(doesn't exist, so it should just write "undefined", with no error)
-console.log(player.phone);
+console.log(player.phone + "Hellooo");
 
 
 //you can iterate over all keys/values using
@@ -452,8 +452,11 @@ let stringToReverse = "stressed";
  */
 function negate(num) {
     //TODO: implement this function
-    
+    return -1 * num;
 }
+
+console.log("negation of -1 is:", negate(-1));
+console.log("negation of ")
 
 /**
  * Returns a new array containing the result
@@ -501,8 +504,9 @@ if the two values are not the same type.
 function min(n1, n2) {
     //TODO: use the ? : ternary operator to return the
     //smaller number in just one line of code
+    return n1 < n2 ? n1 : n2;
 }
-console.log("min(2,1):", min(2,1));
+console.log("min(2,3):", min(2,3));
 
 
 /* FUNCTIONS ARE VALUES: SORTING 
@@ -524,7 +528,7 @@ provide a function that compares two elements.
  */
 function compareNums(n1, n2) {
     //TODO: implement this function
-    
+
 }
 
 console.log("compareNums(1,2):", compareNums(1,2));
