@@ -7,8 +7,11 @@
 //a render() method that renders their
 //data as HTML elements.
 
+<<<<<<< HEAD
 // render method turns/renders JavaScript into HTML elements
 
+=======
+>>>>>>> a714d76ea192f088385736e6a160b1daa46bc695
 class Task {
     constructor(title, done) {
         this.title = title;
@@ -21,10 +24,17 @@ class Task {
         if (this.done) {
             li.classList.add("done");
         }
+<<<<<<< HEAD
         li.addEventListener("click", () => { // lambda functions. this is lexically scoped. "this" inside the lambda functions the same way as you would call this outside of the function
             console.log(this);
             this.done = !this.done;
             li.classList.toggle("done"); 
+=======
+        li.addEventListener("click", () => {
+            console.log(this);
+            this.done = !this.done;
+            li.classList.toggle("done");
+>>>>>>> a714d76ea192f088385736e6a160b1daa46bc695
         });
         return li;
     }
@@ -40,10 +50,18 @@ class TaskList {
     }
 
     purgeCompleted() {
+<<<<<<< HEAD
         this.tasks = this.tasks.filter(task => !task.done); // task is the parameter, second expression will be evaluated and returned
         // this.tasks = this.tasks.filter(function(task) {
         //     return !task.done;
         // })
+=======
+        this.tasks = this.tasks.filter(task => !task.done);
+        //equivallent to this:
+        // this.tasks = this.tasks.filter(function(task) {
+        //     return !task.done;
+        // });
+>>>>>>> a714d76ea192f088385736e6a160b1daa46bc695
     }
 
     render() {
@@ -56,7 +74,11 @@ class TaskList {
 }
 
 class Button {
+<<<<<<< HEAD
     constructor(caption, styleClass = "btn-primary") { // btn-primary is the default value for styleClass
+=======
+    constructor(caption, styleClass = "btn-primary") {
+>>>>>>> a714d76ea192f088385736e6a160b1daa46bc695
         this.caption = caption;
         this.styleClass = styleClass;
     }
@@ -64,7 +86,11 @@ class Button {
     render() {
         let button = document.createElement("button");
         button.textContent = this.caption;
+<<<<<<< HEAD
         button.classList.add("btn", this.styleClass); // add style classes
+=======
+        button.classList.add("btn", this.styleClass);
+>>>>>>> a714d76ea192f088385736e6a160b1daa46bc695
         return button;
     }
 }
@@ -79,7 +105,13 @@ class App {
 
     render() {
         this.parentElem.textContent = "";
+<<<<<<< HEAD
         this.parentElem.appendChild(this.taskList.render());
+=======
+
+        this.parentElem.appendChild(this.taskList.render());
+        
+>>>>>>> a714d76ea192f088385736e6a160b1daa46bc695
         let btn = this.parentElem.appendChild(this.purgeButton.render());
         btn.addEventListener("click", () => {
             this.taskList.purgeCompleted();

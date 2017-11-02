@@ -15,6 +15,11 @@ body {
 
 /* TODO: constrain the width of <div class="container"> elements to a max of 1140px
 and keep the content horizontally-centered with 1rem of padding on left/right */
+.container {
+    max-width: 1140px;
+    margin: 0 auto; 
+    padding: 0 1rem;
+}
 
 .container {
     max-width: 1140px;
@@ -24,6 +29,10 @@ and keep the content horizontally-centered with 1rem of padding on left/right */
 
 /* TODO: set background image of the <header> to `header.jpg` in the `img` directory,
 and set text color to white, and ensure the height is at least 200px */
+header {
+    background-color: #034975;
+    color: #FFF;
+}
 
 header {
     background-color: #034975;
@@ -37,6 +46,19 @@ main {
 
 /* TODO: set the font size of the <h1> in the <header> to 5rem
 and the font weight to 200 */
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 200;
+}
+
+header .page-title {
+    flex: 1;    
+}
+
+header .lead {
+    display: none;
+}
 
 header h1 {
     margin: 0;
@@ -54,6 +76,10 @@ header .lead {
 }
 
 /* TODO: set the height of the SVG icon to 3rem */
+header svg {
+    height: 2rem;
+    fill: currentColor;
+}
 
 header svg {
     height: 2rem;
@@ -64,7 +90,12 @@ header svg {
 and when it has focus/hover change the color to #FF9800, 
 from Material Design Color Palette: 
 https://material.io/guidelines/style/color.html#color-color-palette */
+header a {
+    color: #FFF;
+    transition: all 500ms;
+}
 
+<<<<<<< HEAD
 header a {
     color: #FFF;
     transition: all 500ms;
@@ -86,13 +117,29 @@ header button {
 }
 
 /* TODO: make the <div class="col"> elements layout side-by-side instead of stacked */
+=======
+header a:hover, header a:focus {
+    color: #FF9800;
+}
+>>>>>>> a714d76ea192f088385736e6a160b1daa46bc695
 
+header .container {
+    display: flex;
+    align-items: center;
+}
+
+
+/* TODO: make the <div class="col"> elements layout side-by-side instead of stacked */
+/* <div class="row"> is the parent element of the <div class="col"> elements,
+so if we set display: flex; on it, the immediate child elements will layout
+side-by-side instead of stacked. */
 .col {
     background-color: #FF9800; 
     font-size: 2rem;
     min-height: 150px;
     font-weight: 600;
     color: #FFF;
+<<<<<<< HEAD
     display: flex;
     align-items: center;
     justify-content: center;
@@ -100,11 +147,92 @@ header button {
 
 .row {
     flex-direction: reverse;
+=======
+    
+    /* setting display: flex; on this element
+    allows us to center the text content both 
+    horizontally and vertically*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 1;
+>>>>>>> a714d76ea192f088385736e6a160b1daa46bc695
 }
 
 /* TODO: set the background color of every-other <div class="col"> element 
 to #E65100 so that we can see where the column begin/end */
+.col:nth-of-type(odd) {
+    background-color: #E65100;
+}
 
+nav {
+    background-color: #034975;
+    color: #FFF;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    transform: translateX(-250px);
+    transition: transform 500ms;
+    z-index: 1;
+}
+main, header {
+    transition: transform 500ms;
+}
+header button {
+    color: #FFF;
+    background-color: transparent;
+    border: none;
+}
+.drawer-open nav {
+    transform: translateX(0);
+}
+.drawer-open header,
+.drawer-open main {
+    transform: translateX(250px);
+    /* filter: blur(2px); */
+}
+
+@media (min-width: 768px) {
+    header {
+        background-image: url(../img/header.jpg);
+        background-size: cover;
+        min-height: 200px;
+    }
+
+    header .lead {
+        display: block;
+        font-size: 2rem;
+        font-weight: 200;
+    }
+
+    header h1 {
+        font-size: 5rem;
+    }
+
+    header svg {
+        height: 3rem;
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .col {
+        flex: 50%;
+    }
+}
+
+@media (min-width: 992px) {
+    .col {
+        flex: 33%;
+    }
+}
+
+<<<<<<< HEAD
 .col:nth-of-type(odd) {
     background-color: #E65100;
 }
@@ -177,3 +305,10 @@ nav {
 /* .col:nth-of-type(3) {
     order: 1;
 } */
+=======
+@media (min-width: 1200px) {
+    .col {
+        flex-basis: auto;
+    }
+}
+>>>>>>> a714d76ea192f088385736e6a160b1daa46bc695

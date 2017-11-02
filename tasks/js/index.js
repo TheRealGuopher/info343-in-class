@@ -1,8 +1,11 @@
 // @ts-check
 "use strict";
 
+<<<<<<< HEAD
 //TODO: let's implement a dynamic task list!
 
+=======
+>>>>>>> a714d76ea192f088385736e6a160b1daa46bc695
 let state = {
     tasks: [
         {title: "Learn Event Handling"},
@@ -17,10 +20,18 @@ function renderTask(task) {
     if (task.done) {
         li.classList.add("done");
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> a714d76ea192f088385736e6a160b1daa46bc695
     li.addEventListener("click", function() {
         task.done = !task.done;
         li.classList.toggle("done");
     });
+<<<<<<< HEAD
+=======
+
+>>>>>>> a714d76ea192f088385736e6a160b1daa46bc695
     return li;
 }
 
@@ -36,7 +47,10 @@ render(state);
 
 document.querySelector("#purge")
     .addEventListener("click", function() {
+<<<<<<< HEAD
         // console.log("purge button clicked");
+=======
+>>>>>>> a714d76ea192f088385736e6a160b1daa46bc695
         state.tasks = state.tasks.filter(function(task) {
             return !task.done;
         });

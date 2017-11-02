@@ -21,6 +21,7 @@ let preview = new Audio();
  * @param {Response} response 
  */
 function handleResponse(response) {
+    console.log("response", response);
     if (response.ok) {
         return response.json();
     } else {

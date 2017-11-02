@@ -53,8 +53,12 @@ The primitive data types include:
 
 //TODO: declare a new variable named `x`
 //and initialize it to a literal string
+<<<<<<< HEAD
 let x = "Hello, Javascript!";
 
+=======
+let x = "Hello, JavaScript!";
+>>>>>>> a714d76ea192f088385736e6a160b1daa46bc695
 
 //the `console` object represents the developer
 //tools console, or the terminal if you run this
@@ -62,7 +66,10 @@ let x = "Hello, Javascript!";
 //value of an expression to the console.
 //TODO: write `x` to the console
 console.log("the value of x is: %s (formatted output)", x);
+<<<<<<< HEAD
 
+=======
+>>>>>>> a714d76ea192f088385736e6a160b1daa46bc695
 
 //if you don't initialize a new variable
 //it's value is `undefined`
@@ -71,7 +78,10 @@ console.log("uninitializedVariable is:", uninitializedVariable);
 if (uninitializedVariable == undefined) {
     console.log("variable is undefined");
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> a714d76ea192f088385736e6a160b1daa46bc695
 
 //variables declared with `let` have block scope
 //similar to other languages like Java
@@ -84,8 +94,12 @@ if (temp > 0) {
 }
 //what do you think the value of `temp` is after the if block?
 //use console.log() to find out!
+<<<<<<< HEAD
 console.log("the value of temp is: %s", temp);
 
+=======
+console.log("the value of temp is:", temp);
+>>>>>>> a714d76ea192f088385736e6a160b1daa46bc695
 
 let temp2 = 5;
 if (temp2 > 0) {
@@ -94,8 +108,12 @@ if (temp2 > 0) {
 }
 //what do you think the value of `temp2` is after the if block?
 //use console.log() to find out!
+<<<<<<< HEAD
 console.log("the value of temp2 is %s", temp2);
 
+=======
+console.log("the value of temp2 is:", temp2);
+>>>>>>> a714d76ea192f088385736e6a160b1daa46bc695
 
 //moral of the story: use `let` instead of `var`
 
@@ -114,34 +132,50 @@ To create a zero-length array, just use `[]`.
 let emptyArray = [];
 emptyArray.push("testing");
 emptyArray.push(10);
+<<<<<<< HEAD
 console.log("emptyArray is: %s", emptyArray);
 
+=======
+console.log("emptyArray is:", emptyArray);
+>>>>>>> a714d76ea192f088385736e6a160b1daa46bc695
 
 //TODO: declare a variable named `nums`
 //and set it equal to an array of numbers
 //containing 10,11,12,13,14
 let nums = [10,11,12,13,14];
 console.log("nums is:", nums);
+<<<<<<< HEAD
 
+=======
+>>>>>>> a714d76ea192f088385736e6a160b1daa46bc695
 
 //the `.length` property returns 
 //the number of elements in the array
 //TODO: write the length of `nums` to the console
+<<<<<<< HEAD
 console.log("array contains %d elements", nums.length);
 
+=======
+console.log("nums contains %d elements", nums.length);
+>>>>>>> a714d76ea192f088385736e6a160b1daa46bc695
 
 //you can add elements to the end of an array 
 //using the build-in .push() method
 //TODO: add the number 15 to the end of the `nums` array
 nums.push(15);
+<<<<<<< HEAD
 console.log("added 15 here %s", nums);
 
+=======
+console.log("nums is now:", nums);
+>>>>>>> a714d76ea192f088385736e6a160b1daa46bc695
 
 //TODO: create a new variable named `courses`
 //that is initialized to an array of strings,
 //one for each course name you are currently 
 //taking (e.g., "INFO 343"), 
 //and write that to the console
+<<<<<<< HEAD
 let courses = ["INFO 343","INFO 470","INFO 481"];
 console.log("courses are:", courses);
 
@@ -152,6 +186,17 @@ console.log("last element is %s", courses[courses.length - 1]);
 let sparseArray = [];
 sparseArray[10] = "foo";
 console.log(sparseArray);
+=======
+let courses = ["INFO 343", "INFO 344"];
+console.log("courses is:", courses);
+
+//TODO: write the last element in the array to the console
+console.log("last course is:", courses[courses.length-1]);
+
+// let sparseArray = [];
+// sparseArray[10] = "foo";
+// console.log(sparseArray);
+>>>>>>> a714d76ea192f088385736e6a160b1daa46bc695
 
 /* FOR LOOPS
 For loops work exactly like they do in Java,
@@ -170,6 +215,11 @@ between 0 and 49. Write the populated
 array to the console to make sure you
 did it right.
 */
+let evens = [];
+for (let i = 0; i < 49; i+=2) {
+    evens.push(i);
+}
+console.log("evens is:", evens);
 
 let evens = [];
 for (let i = 0; i < 49; i+=2) {
@@ -200,6 +250,10 @@ use `{}`.
 let emptyObject = {};
 emptyObject.newKey = 10;
 console.log("emptyObject is now:", emptyObject);
+<<<<<<< HEAD
+=======
+
+>>>>>>> a714d76ea192f088385736e6a160b1daa46bc695
 
 //TODO: declare a new variable named `player`
 //and set it to an object with the following properties:
@@ -212,14 +266,22 @@ let player = {
     lastName: "Rodriguez",
     totalPoints: 4,
     level: 0
+<<<<<<< HEAD
 }
+=======
+};
+>>>>>>> a714d76ea192f088385736e6a160b1daa46bc695
 
 //you can get the value for a key using
 //the familiar `.` syntax
 //TODO: write the firstName and lastName properties to the console
+<<<<<<< HEAD
 console.log("First Name: %s", player.firstName);
 console.log("Last Name: %s", player.lastName);
 
+=======
+console.log(player.firstName, player.lastName);
+>>>>>>> a714d76ea192f088385736e6a160b1daa46bc695
 
 //you can also get the value for a key
 //using an array-like syntax, which can
@@ -243,15 +305,25 @@ console.log(player.email);
 //returns `undefined` (no error)
 //TODO: write the value of the `phone` property to the console
 //(doesn't exist, so it should just write "undefined", with no error)
+<<<<<<< HEAD
 console.log(player.phone + "Hellooo");
 
+=======
+console.log(player.phone);
+console.log(player.fistName);
+>>>>>>> a714d76ea192f088385736e6a160b1daa46bc695
 
 //you can iterate over all keys/values using
 //the for...in syntax
 console.group("keys/values from player using for...in");
+<<<<<<< HEAD
 //TODO: iterate over all keys/values using for...in
 for (let key in player) {
     console.log(key, player[key]);
+=======
+for (let key in player) {
+    console.log("%s: %o", key, player[key]);    
+>>>>>>> a714d76ea192f088385736e6a160b1daa46bc695
 }
 console.groupEnd();
 
@@ -259,7 +331,12 @@ console.groupEnd();
 //and iterate over that array of keys
 console.group("keys/values from player using Object.keys()");
 let keys = Object.keys(player);
+<<<<<<< HEAD
 for (let i  = 0; i < keys.length; i++) {
+=======
+console.log(keys);
+for (let i = 0; i < keys.length; i++) {
+>>>>>>> a714d76ea192f088385736e6a160b1daa46bc695
     let key = keys[i];
     console.log(key, player[key]);
 }
@@ -279,6 +356,7 @@ console.groupEnd();
 let courses2 = [
     {
         name: "INFO 343",
+<<<<<<< HEAD
         section: "AD",
         teachers: ["Stearns", "Basa"]
     },
@@ -296,10 +374,21 @@ let courses2 = [
 
 console.log(courses2[courses2.length -1].teachers[0]);
 
+=======
+        section: "D",
+        teachers: ["Stearns", "Basa"]
+    },
+    {
+        name: "INFO 344",
+        section: "A",
+        teachers: ["Stearns", "Kellogg", "Anderson"]
+    }
+];
+>>>>>>> a714d76ea192f088385736e6a160b1daa46bc695
 
 //TODO: write the first teacher name from the 
 //last course in the `courses` array to the console
-
+console.log(courses2[courses2.length-1].teachers[0]);
 
 
 /* FUNCTIONS
@@ -323,12 +412,19 @@ a value returns `undefined` implicitly.
  * @returns {string}
  */
 function getGreeting(thePlayer) {
+<<<<<<< HEAD
     return "Hello " + thePlayer.firstName + " " +  thePlayer.lastName + "!";
+=======
+    return "Hello " + thePlayer.firstName + " " + thePlayer.lastName + "!";
+>>>>>>> a714d76ea192f088385736e6a160b1daa46bc695
 }
 //TODO: call getGreeting() passing your `player` variable
 //and write the return value to the console
 console.log(getGreeting(player));
+<<<<<<< HEAD
 
+=======
+>>>>>>> a714d76ea192f088385736e6a160b1daa46bc695
 
 //TODO: change the getGreeting() function above
 //to include the player's last name as well as first name,
@@ -352,9 +448,14 @@ console.log(getGreeting(player));
  function levelUp(thePlayer) {
     //TODO: implement this function
     thePlayer.level++;
+<<<<<<< HEAD
     thePlayer.totalPoints += Math.ceil(thePlayer.totalPoints *
     thePlayer.level * 0.1);
     return thePlayer.totalPoints;
+=======
+    thePlayer.totalPoints += Math.ceil(thePlayer.totalPoints * (thePlayer.level * 0.1));
+    return thePlayer;
+>>>>>>> a714d76ea192f088385736e6a160b1daa46bc695
 }
 // console.log(levelUp(player));
 
@@ -400,9 +501,17 @@ console.log("random integers:", randomNums);
  */
 function max(arrayOfNumbers) {
     //TODO: implement this function according to the comments above
+<<<<<<< HEAD
     let max = arrayOfNumbers[0];
     for (let i = 1; i < arrayOfNumbers.length; i++) {
         // max = Math.max(max, arrayOfNumbers[i]);
+=======
+    let max = arrayOfNumbers[0]
+    for (let i = 0; i < arrayOfNumbers.length; i++) {
+        // if (arrayOfNumbers[i] > max) {
+        //     max = arrayOfNumbers[i]
+        // }
+>>>>>>> a714d76ea192f088385736e6a160b1daa46bc695
         max = arrayOfNumbers[i] > max ? arrayOfNumbers[i] : max;
     }
     return max;

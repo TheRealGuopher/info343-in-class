@@ -46,8 +46,15 @@ BABYNAMES.sort(function(rec1, rec2) {
 //When the state changes, we re-render the UI.
 //User actions trigger changes to the state, which
 //triggers a re-render of the UI.
+<<<<<<< HEAD
 /**
  * @property {number} currentPage // specify the property type
+=======
+
+/**
+ * @property {BabyNameRecord[]} records
+ * @property {number} currentPage
+>>>>>>> a714d76ea192f088385736e6a160b1daa46bc695
  */
 let state = {
     records: BABYNAMES, //the records to render (might be filtered)
@@ -59,12 +66,23 @@ let state = {
 //<tbody> element that is already in the page.
 
 /**
+<<<<<<< HEAD
  * Creates and returns a new DOM element...
  * @param {string} name 
  * @param {*} value 
  * @param {string} className 
  */
 function createElem(name, value, className) { // create new element based on name, which is an element name like p, div, h1
+=======
+ * Creates and returns a new DOM element using `name`
+ * as the element name, value as the textContent, and
+ * className as the style class name.
+ * @param {string} name the element name
+ * @param {*} value 
+ * @param {string} [className]
+ */
+function createElem(name, value, className) {
+>>>>>>> a714d76ea192f088385736e6a160b1daa46bc695
     let elem = document.createElement(name);
     elem.textContent = value;
     if (className) {
@@ -74,6 +92,7 @@ function createElem(name, value, className) { // create new element based on nam
 }
 
 /**
+<<<<<<< HEAD
  * Renders a record as a table row
  * @param {BabyNameRecord} record // specify BabyNameRecord so that you can call properties of BabyNameRecord
  */
@@ -81,10 +100,22 @@ function renderTableRow(record) {
     let tr = document.createElement("tr");
     tr.appendChild(createElem("td", record.name, ""));
     tr.appendChild(createElem("td", record.sex, ""));
+=======
+ * Renders a record as a table row (<tr>)
+ * element and returns that element.
+ * @param {BabyNameRecord} record 
+ * @returns {HTMLElement}
+ */
+function renderTableRow(record) {
+    let tr = document.createElement("tr");
+    tr.appendChild(createElem("td", record.name));
+    tr.appendChild(createElem("td", record.sex));
+>>>>>>> a714d76ea192f088385736e6a160b1daa46bc695
     tr.appendChild(createElem("td", record.count, "text-right"));
     return tr;
 }
 
+<<<<<<< HEAD
 // render a page's state
 function render(state) {
     let tbody = document.querySelector("tbody");
@@ -105,10 +136,34 @@ function render(state) {
 }
 
 render(state)
+=======
+function render(state) {
+    let tbody = document.querySelector("tbody");
+    tbody.textContent = "";
+
+    let totalPages = Math.ceil(state.records.length / PAGE_SIZE);
+    let startingIndex = state.currentPage * PAGE_SIZE;
+    let pageRecords = state.records.slice(startingIndex, startingIndex + PAGE_SIZE);
+    for (let i = 0; i < pageRecords.length; i++) {
+        tbody.appendChild(renderTableRow(pageRecords[i]));
+    }
+
+    CURRENT_PAGE.textContent = state.currentPage + 1;
+    TOTAL_PAGES.textContent = totalPages.toString();
+    PREV_PAGE_BUTTON.disabled = state.currentPage === 0;
+    NEXT_PAGE_BUTTON.disabled = state.currentPage === totalPages - 1;
+}
+
+render(state);
+>>>>>>> a714d76ea192f088385736e6a160b1daa46bc695
 
 //TODO: listen for the "click" event raised by the 
 //prev/next page buttons, mutate the state.currentPage,
 //and re-render
+NEXT_PAGE_BUTTON.addEventListener("click", function() {
+    state.currentPage++;
+    render(state);
+});
 
 NEXT_PAGE_BUTTON.addEventListener("click", function() {
     // console.log("next page button pressed");
@@ -123,10 +178,18 @@ PREV_PAGE_BUTTON.addEventListener("click", function() {
 })
 
 
+PREV_PAGE_BUTTON.addEventListener("click", function() {
+    state.currentPage--;
+    render(state);
+});
+
 //TODO: listen for the "input" event raised by the
 //name filter <input> element, filter the state.records,
 //and re-render
+<<<<<<< HEAD
 
+=======
+>>>>>>> a714d76ea192f088385736e6a160b1daa46bc695
 NAME_FILTER_INPUT.addEventListener("input", function() {
     let q = NAME_FILTER_INPUT.value.trim().toLowerCase();
     state.records = BABYNAMES.filter(function(record) {
@@ -135,3 +198,7 @@ NAME_FILTER_INPUT.addEventListener("input", function() {
     state.currentPage = 0;
     render(state);
 });
+<<<<<<< HEAD
+=======
+
+>>>>>>> a714d76ea192f088385736e6a160b1daa46bc695
